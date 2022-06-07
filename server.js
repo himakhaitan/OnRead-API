@@ -8,6 +8,18 @@ const https = require("https");
 // Initialize Express
 const app = express();
 
+// Db Connection
+const sequelize = require("./dbConnection");
+
+sequelize
+  .authenticate()
+  .then(() => {
+    console.log("Database Connection has been established successfully.");
+  })
+  .catch((error) => {
+    console.error("Unable to connect to the database:", error);
+  });
+
 // Config
 app.use(cors());
 app.use(express.json());
