@@ -20,7 +20,10 @@ const Book = sequelize.define(
     },
     genre: {
       type: DataTypes.STRING,
-    }
+    },
+    issuedBy: {
+      type: DataTypes.STRING,
+    },
   },
   {
     tableName: "Books",
