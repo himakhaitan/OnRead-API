@@ -16,7 +16,7 @@ const Book = sequelize.define(
       validate: {
         notEmpty: true,
         len: [2, 50],
-      }
+      },
     },
     author: {
       type: DataTypes.STRING,
@@ -24,13 +24,13 @@ const Book = sequelize.define(
       validate: {
         notEmpty: true,
         len: [2, 50],
-      }
+      },
     },
     genre: {
       type: DataTypes.STRING,
       validate: {
         notEmpty: true,
-      }
+      },
     },
     issuedBy: {
       type: DataTypes.STRING,

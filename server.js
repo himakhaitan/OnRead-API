@@ -59,7 +59,7 @@ app.get("/", (req, res) => {
 
 const booksRouter = require("./api/admin/books");
 
-app.use("/books", booksRouter);
+app.use("/api/books", booksRouter);
 
 // Start the server
 app.listen(PORT, () => {
