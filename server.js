@@ -11,6 +11,12 @@ const app = express();
 // Db Connection
 const sequelize = require("./dbConnection");
 
+// Sync Tables
+const Books = require("./models/Books");
+Books.sync();
+const Students = require("./models/Students");
+Students.sync();
+
 sequelize
   .authenticate()
   .then(() => {
@@ -48,6 +54,12 @@ app.get("/", (req, res) => {
     host: req.headers.host,
   });
 });
+
+// Routes Configuration
+
+const booksRouter = require("./api/admin/books");
+
+app.use("/books", booksRouter);
 
 // Start the server
 app.listen(PORT, () => {
