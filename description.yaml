@@ -65,6 +65,48 @@ paths:
                       nullable: false,
                       type: string,
                     }
+                  book_id:
+                    {
+                      description: Title of the Book,
+                      minLength: 2,
+                      maxLength: 50,
+                      nullable: false,
+                      type: string,
+                    }
+                  author:
+                    {
+                      description: Author of the Book,
+                      minLength: 2,
+                      maxLength: 50,
+                      nullable: false,
+                      type: string,
+                    }
+                  genre:
+                    {
+                      description: Genre of the Book,
+                      minLength: 2,
+                      maxLength: 50,
+                      nullable: false,
+                      type: string,
+                    }
+                  issuedBy:
+                    {
+                      description: Book Issued by,
+                      nullable: false,
+                      type: string,
+                    }
+                  updatedAt:
+                    {
+                      description: Date Updated At,
+                      nullable: false,
+                      type: string,
+                    }
+                  createdAt:
+                    {
+                      description: Date Created At,
+                      nullable: false,
+                      type: string,
+                    }
         "500":
           description: Internal Server Error
           content:

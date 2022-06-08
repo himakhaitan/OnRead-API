@@ -35,7 +35,7 @@ router.post("/new", async (req, res) => {
     title: req.body.title,
     author: req.body.author,
     genre: req.body.genre,
-    issuedBy: 0,
+    issuedBy: null,
   });
 
   if (!newBook) {
